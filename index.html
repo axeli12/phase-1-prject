@@ -1,7 +1,54 @@
 <!DOCTYPE html>
 <html lang="en"
-<head></head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./stylessheets/index.css" />
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>no name yet</title>
+</head>
 
-<body>
+<body style="background-color: #deb887">
+    <div id="heading">
+        <nav class="nav-grey darken-4">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand=logo"> Welcome to dink list</a>
+                <br>
+                <div class = "center-align">
+                <img src = "https://i.pinimg.com/736x/0e/d9/2b/0ed92bcea53279c3e022229934e75b39.jpg" class = "center-align"/>
+
+            </div>
+            <section class="getInput">
+                <h2>Find A recipe!</h2>
+                
+                <div class="informationBox">
+                    <input class="searchText" type="text" name="" value="" placeholder="Search your Drink">
+                            <button id="searchButton" class="" type="button" name="button">
+                                </button>
+
+    </div>
+
+    <section class="results">
+
+    </section>
+
+    <div id="modalDisplay" class="drinkDisplayWindow">
+        <div class="drinkContent">
+            <span id="closeButton">&times;</span>
+            <h2 class="drinkName"></h2>
+            <img id="drinkThumbnail" src="" alt="">
+            <h4>Ingredients:</h4>
+            <ul class="drinkIngredients">
+            </ul>
+            <h4>Instructions</h4>
+            <p class="drinkInstructions"></p>
+            
+        </div>
+    </div>
+    <p></p>
+
     <script src="index.js"></script>
 </body>
