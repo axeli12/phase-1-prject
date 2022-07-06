@@ -1,8 +1,8 @@
-Tipsy Listy
+Dionysus Menu
 
 Overview 
 
-Tipsy Listy is going to be a wbesite where you can load into and find drinks
+Dionysus Menu is going to be a wbesite where you can load into and find drinks
 that you might want to try out, when they pull one of the drinks up their
 respected recipe and name will be loaded on to the page. Visitors will be
 able to come and veiw a collection of the most popular drinks that are going
