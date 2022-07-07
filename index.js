@@ -57,3 +57,5 @@ function closeButton() {
 document.getElementById('searchButton').addEventListener('click', getDrinkName);
 document.getElementById('closeButton').addEventListener('click', closeButton);
 
+
+const newUrl = 'http://localhost:3000/Popular drinks/'
