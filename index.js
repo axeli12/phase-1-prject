@@ -83,9 +83,9 @@ function getDrinks(){
         <div class = "drink-info">
             <p>${drinkObj.name}</p>
             <p>${drinkObj.recipe}</p>
+            
             <p>
-            <p>
-            likes: $<span class="liked-times">${drinkObj.likes}</span> 
+            likes: <span class="liked-times">${drinkObj.likes}</span> 
             </p>
             </div>
 
@@ -95,10 +95,25 @@ function getDrinks(){
         `
         main.appendChild(drink)
         drink.querySelector('#like').addEventListener('click', () => {
-            drinkObj.likes +=5
+            drinkObj.likes +=1
             drink.querySelector('span').textContent = drinkObj.likes
+            updateLikes(drink)
            
         })
+    
+    function updateLikes(drinkObj){
+        fetch(`http://localhost:3000/Populardrinks/${drinkObj.id}`, {
+            method:'PATCH',
+            headers:{
+                'Content-Type': 'application/json'
+
+            },
+            body: JSON.stringify(drinkObj)
+        })
+        .then(res => res.json())
+        .then(drink => console.log(drink))
+    }
+
         
     }
 
