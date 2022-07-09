@@ -11,11 +11,11 @@ their recipies if they think others will like.
 
 Features
 
-The page will load with a top ten drinks, the page will also include a search 
+The page will load with a top 6 drinks, the page will also include a search 
 menu to find drinks. Add new drink option to be able to add their favorite
 drink. There will also be a like button to add to the drinks to see the most 
-popular on the list. There will also be a timer option to time yourself on 
-the drink making.
+popular on the list. 
+
 
 Project Requirments
 1. HTML/CSS/JS files which access data from db.json file
