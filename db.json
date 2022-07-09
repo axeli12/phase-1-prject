@@ -1,40 +1,40 @@
 {
-    "Popular drinks": [
+    "Populardrinks": [
       {
         "id": 1,
         "name": "Classic Mojito",
         "image": "https://www.acouplecooks.com/wp-content/uploads/2019/12/Mojito-007-735x919.jpg",
-        "recipe": "Fresh mint,Limejuice,Rum,Simple syrup,Soda water"
+        "recipe": "Recipe: Fresh mint,Limejuice,Rum,Simple syrup,Soda water"
       },
       {
         "id": 2,
         "name": "Aperol Spritz",
         "image": "https://www.acouplecooks.com/wp-content/uploads/2020/05/Aperol-Spritz-020-735x919.jpg",
-        "recipe": "Sparkling Wine, Aperol, Soda Water(not tonic water)"
+        "recipe": "Recipe:  Sparkling Wine, Aperol, Soda Water(not tonic water)"
       },
       {
         "id": 3,
         "name": "Vodka Spritzer",
         "image": "https://www.acouplecooks.com/wp-content/uploads/2020/10/Vodka-Spritzer-003-735x919.jpg",
-        "recipe": "Vodka, Soda Water, Cranberry juice, Simple Syrup, Srawberries, lemon"
+        "recipe": "Recipe:  Vodka, Soda Water, Cranberry juice, Simple Syrup, Srawberries, lemon"
       },
       {
         "id": 4,
         "name": "Red Sangria",
         "image": "https://www.acouplecooks.com/wp-content/uploads/2020/05/Red-Wine-Sangria-051-735x919.jpg",
-        "recipe": "Fruit, Sugar, Dry Red Wine, Brandy, Orange Liqueur, Sparkling water"
+        "recipe": "Recipe:  Fruit, Sugar, Dry Red Wine, Brandy, Orange Liqueur, Sparkling water"
       },
       {
         "id": 5,
         "name": "Tequila Sunrise",
         "image": "https://www.acouplecooks.com/wp-content/uploads/2020/04/Tequila-Sunrise-003-735x919.jpg",
-        "recipe": "Tequila, Orange juice, Grenadine"
+        "recipe": "Recipe:  Tequila, Orange juice, Grenadine"
       },
       {
         "id": 6,
         "name": "Gin Basil Smash",
         "image": "https://www.acouplecooks.com/wp-content/uploads/2021/05/Gin-Basil-Smash-001-735x919.jpg",
-        "recipe": "Gin, Basil leaves, Lemon juice, Simple syrup"
+        "recipe": "Recipe:  Gin, Basil leaves, Lemon juice, Simple syrup"
       }
     ]
 }

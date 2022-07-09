@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
     
-    startCountdown()
+    //startCountdown()
 })
 
 function pagerefresh(){
@@ -54,8 +54,36 @@ function closeButton() {
     document.querySelector('#modalDisplay').style.display = 'none';
 }
 
+const main = document.getElementById('main')
+const viewDrinks = document.getElementById('view')
+
+
 document.getElementById('searchButton').addEventListener('click', getDrinkName);
 document.getElementById('closeButton').addEventListener('click', closeButton);
+viewDrinks.addEventListener('click', getDrinks)
 
+const newUrl = "http://localhost:3000/Populardrinks"
 
-const newUrl = 'http://localhost:3000/Popular drinks/'
+function getDrinks(){
+    fetch(newUrl)
+    .then (res=>res.json())
+    .then(pagerefresh())
+    .then(data=>data.forEach(drink=>loadDrink(drink)))
+        
+    }
+
+    function loadDrink(drinkObj){
+        const drink = document.createElement('ul')
+        console.log(drink)
+        drink.id = `${drinkObj.id}`
+        drink.className = 'drink'
+        drink.innerHTML = `
+        <img src = "${drinkObj.image}" class="dirnk-pic"/>
+        <div class = "drink-info">
+            <p>${drinkObj.name}/>
+            <p>${drinkObj.recipe}/>
+            <div class="drink button"
+            <button id ="like</button>
+        `
+        main.appendChild(drink)
+    }
