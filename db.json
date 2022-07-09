@@ -41,6 +41,13 @@
       "image": "https://www.acouplecooks.com/wp-content/uploads/2021/05/Gin-Basil-Smash-001-735x919.jpg",
       "recipe": "Recipe:  Gin, Basil leaves, Lemon juice, Simple syrup",
       "likes": 70
+    },
+    {
+      "name": "Madras Cocktail",
+      "imageURL": "https://www.acouplecooks.com/wp-content/uploads/2019/12/Madras-Cocktail-008.jpg",
+      "recipe": "Vodka\nCranberry juice\nOrange juice\nSpritz of lime",
+      "likes": "",
+      "id": 7
     }
   ]
 }

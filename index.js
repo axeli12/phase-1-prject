@@ -1,3 +1,14 @@
+const main = document.getElementById('main')
+const viewDrinks = document.getElementById('view')
+const newDrink = document.getElementById('newDrink')
+
+document.getElementById('drink-form').addEventListener('submit', newDrinkObj)
+document.getElementById('searchButton').addEventListener('click', getDrinkName);
+document.getElementById('closeButton').addEventListener('click', closeButton);
+
+viewDrinks.addEventListener('click', getDrinks)
+const newUrl = "http://localhost:3000/Populardrinks"
+
 document.addEventListener('DOMContentLoaded',()=>{
     
     //startCountdown()
@@ -54,18 +65,22 @@ function closeButton() {
     document.querySelector('#modalDisplay').style.display = 'none';
 }
 
-const main = document.getElementById('main')
-const viewDrinks = document.getElementById('view')
-const newDrink = document.getElementById('newDrink')
 
+function newDrinkObj(e){
+    e.preventDefault()
+    let newDrinkObj = {
+        name:e.target.name.value,
+        image:e.target.image.value,
+        recipe:e.target.recipe.value,
+        likes:e.target.likes.value,
+    
+    }
+    loadDrink(newDrinkObj)
+    addNewDrink(newDrinkObj)
+    document.querySelector('#drink-form').reset()
+}
 
-document.getElementById('searchButton').addEventListener('click', getDrinkName);
-document.getElementById('closeButton').addEventListener('click', closeButton);
-viewDrinks.addEventListener('click', getDrinks)
-
-//reders drinks
-const newUrl = "http://localhost:3000/Populardrinks"
-
+//renders drinks
 function getDrinks(){
     fetch(newUrl)
     .then (res=>res.json())
@@ -120,9 +135,19 @@ function getDrinks(){
     }
 
     // adding new drink
+function addNewDrink(newDrinkObj){
+    fetch(`http://localhost:3000/Populardrinks`,{
+        method:'POST',
+        headers:{
+            'Content-type': 'application/json'
+        },
+        body:JSON.stringify(newDrinkObj)
+    })
+    .then(res => res.json())
+    .then(drink => console.log(drink))
+}
 
 
-    
 
 
 
