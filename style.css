@@ -1,0 +1,17 @@
+.card {
+    background: #483d8b;
+    display: inline-grid;
+    padding: 0px;
+    text-align: center;
+    margin-left: 20px; 
+    } 
+  
+  #main {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  #searchButton{
+    border-radius: 1rem;
+  }
+  
