@@ -19,16 +19,15 @@ body{
     border-radius: 1rem;
     align-items: center;
     background-color: #F08080;
-    
- }
-
- 
-  h2{
+    }
+h2{
     text-align: center;
+    color: #fff
   }
 
   h4{
     text-align: center;
+    color: #fff;
   }
 
   #view{
@@ -37,12 +36,14 @@ body{
     align-items: center;
     background-color: #F08080;
     color: #fff;
+    border: none;
+    border: 10px;
   }
 
-  #heading{
-    align-items: center;
-    text-align: center;
-  }
-  title{
-    text-align: center;
-  }
+  div.container{
+    background-color:#deb887;
+    color: #fff;
+}
+ #image{
+  color: #fff;
+ }
