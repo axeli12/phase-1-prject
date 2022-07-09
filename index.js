@@ -10,7 +10,7 @@ function pagerefresh(){
 function getDrinkName() {
 
     const searchText = document.querySelector('.searchText').value;
-
+// loads api data
     fetch (`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`)
         .then(response => response.json())
         .then(data => {
@@ -56,12 +56,14 @@ function closeButton() {
 
 const main = document.getElementById('main')
 const viewDrinks = document.getElementById('view')
+const newDrink = document.getElementById('newDrink')
 
 
 document.getElementById('searchButton').addEventListener('click', getDrinkName);
 document.getElementById('closeButton').addEventListener('click', closeButton);
 viewDrinks.addEventListener('click', getDrinks)
 
+//reders drinks
 const newUrl = "http://localhost:3000/Populardrinks"
 
 function getDrinks(){
@@ -117,3 +119,14 @@ function getDrinks(){
         
     }
 
+    // adding new drink
+
+
+    
+
+
+
+
+
+
+    
