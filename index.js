@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     //startCountdown()
 })
 
-function pagerefresh(){
+function pagerefresh(){ 
     main.innerHTML = ''
 }
 

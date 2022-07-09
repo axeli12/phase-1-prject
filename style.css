@@ -33,7 +33,17 @@ body{
   }
 
   #view{
+    position: absolute;
     border-radius: 1rem;
     align-items: center;
     background-color: #F08080;
+    color: #fff;
+  }
+
+  #heading{
+    align-items: center;
+    text-align: center;
+  }
+  title{
+    text-align: center;
   }
