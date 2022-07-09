@@ -1,5 +1,9 @@
-.card {
-    background: #483d8b;
+body{
+  align-items: center;
+}
+
+.drink {
+    background: #F08080;
     display: inline-grid;
     padding: 0px;
     text-align: center;
@@ -11,7 +15,25 @@
     text-align: center;
   }
 
-  #searchButton{
+  #searchButton {
     border-radius: 1rem;
+    align-items: center;
+    background-color: #F08080;
+    
+ }
+
+ 
+
+  h2{
+    text-align: center;
   }
-  
+
+  h4{
+    text-align: center;
+  }
+
+  #view{
+    border-radius: 1rem;
+    align-items: center;
+    background-color: #F08080;
+  }

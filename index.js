@@ -71,6 +71,7 @@ function getDrinks(){
     .then(data=>data.forEach(drink=>loadDrink(drink)))
         
     }
+   
 
     function loadDrink(drinkObj){
         const drink = document.createElement('ul')
@@ -80,10 +81,24 @@ function getDrinks(){
         drink.innerHTML = `
         <img src = "${drinkObj.image}" class="dirnk-pic"/>
         <div class = "drink-info">
-            <p>${drinkObj.name}/>
-            <p>${drinkObj.recipe}/>
-            <div class="drink button"
-            <button id ="like</button>
+            <p>${drinkObj.name}</p>
+            <p>${drinkObj.recipe}</p>
+            <p>
+            <p>
+            likes: $<span class="liked-times">${drinkObj.likes}</span> 
+            </p>
+            </div>
+
+            <div class="buttons">
+            <button id ="like"> like Me </button>
+            </div>
         `
         main.appendChild(drink)
+        drink.querySelector('#like').addEventListener('click', () => {
+            drinkObj.likes +=5
+            drink.querySelector('span').textContent = drinkObj.likes
+           
+        })
+        
     }
+
