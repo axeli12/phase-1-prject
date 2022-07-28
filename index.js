@@ -5,14 +5,11 @@ const newDrink = document.getElementById('newDrink')
 document.getElementById('drink-form').addEventListener('submit', newDrinkObj)
 document.getElementById('searchButton').addEventListener('click', getDrinkName);
 document.getElementById('closeButton').addEventListener('click', closeButton);
-
 viewDrinks.addEventListener('click', getDrinks)
+
 const newUrl = "http://localhost:3000/Populardrinks"
 
-document.addEventListener('DOMContentLoaded',()=>{
-    
-    //startCountdown()
-})
+
 
 function pagerefresh(){ 
     main.innerHTML = ''
@@ -26,6 +23,7 @@ function getDrinkName() {
         .then(response => response.json())
         .then(data => {
             console.log(data.drinks);
+            
 
 
         if(data.drinks == null){
@@ -36,11 +34,11 @@ function getDrinkName() {
             chosenDrink.src = data.drinks[0].strDrinkThumb
 
             let chosenDrinkName = document.querySelector('.drinkName');
-            chosenDrinkName.innerHTML = data.drinks[0].strDrink;
+            chosenDrinkName.innerText = data.drinks[0].strDrink;
 
           
             let chosenDrinkInstructions = document.querySelector('.drinkInstructions');
-            chosenDrinkInstructions.innerHTML = data.drinks[0].strInstructions.split(' ').join('');
+            chosenDrinkInstructions.innerText = data.drinks[0].strInstructions
 
         
             let chosenDrinkIngredients = document.querySelector('.drinkIngredients');
@@ -54,9 +52,12 @@ function getDrinkName() {
 })
 .catch(error => alert(error))
 
+
+document.querySelector('#modalDisplay').style.display = 'block';
+
 }
  
- document.querySelector('#modalDisplay').style.display = 'block';
+
 
 
 
@@ -106,8 +107,8 @@ function getDrinks(){
             </p>
             </div>
 
-            <div class="buttons">
-            <button id ="like"> like Me </button>
+            <div class="buttons" button id = "like">
+            <button = #like > like Me </button>
             </div>
         `
         main.appendChild(drink)
@@ -117,6 +118,8 @@ function getDrinks(){
             updateLikes(drink)
            
         })
+     
+    //fucntion to add and update likes
     
     function updateLikes(drinkObj){
         fetch(`http://localhost:3000/Populardrinks/${drinkObj.id}`, {
@@ -148,12 +151,17 @@ function addNewDrink(newDrinkObj){
 }
 
 
+function closeButton() {
+    document.querySelector('#modalDisplay').style.display = 'none';
+}
 
 
-
-
-
-
-    
+const copyButton = document.getElementById('btn-copy')
+copyButton.addEventListener('click', async (event) =>{
+    const content = document.getElementById('copying').textContent
+    await navigator.clipboard.writeText(content)
+    const copied = await navigator.clipboard.readText()
+    console.log(copied)
+})
 
 

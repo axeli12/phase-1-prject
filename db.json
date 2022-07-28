@@ -41,7 +41,14 @@
       "image": "https://www.acouplecooks.com/wp-content/uploads/2021/05/Gin-Basil-Smash-001-735x919.jpg",
       "recipe": "Recipe:  Gin, Basil leaves, Lemon juice, Simple syrup",
       "likes": 70
+    },
+    {
+      "name": "sea breeze ",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/12/Sea-Breeze-Cocktail-003.jpg",
+      "recipe": "vodka\ncrannberry juice\n",
+      "likes": "90",
+      "id": 7
     }
+    
   ]
 }
-

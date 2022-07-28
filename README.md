@@ -12,7 +12,9 @@ their recipies if they think others will like.
 Features
 
 The page will load with a top 6 drinks, the page will also include a search 
-menu to find drinks. Add new drink option to be able to add their favorite
+menu to find drinks, when you have found the drink that you want 
+there is now a copy button to copy the content
+. Add new drink option to be able to add their favorite
 drink. There will also be a like button to add to the drinks to see the most 
 popular on the list. 
 

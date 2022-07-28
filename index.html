@@ -40,6 +40,8 @@
                 <div class="informationBox">
                     <input class="searchText" type="text" name="" value="" placeholder="Find Your Poison!">
                             <button id="searchButton" class="" type="button" name="button">Search!</button>
+                            
+                           
                         
                 
                 </div>
@@ -48,30 +50,26 @@
     <section class="results">
 
     </section>
-        <div style="text-align: center;">
-        <div id="modalDisplay" class="drinkDisplayWindow">
+        
+    <div id="modalDisplay" class="drinkDisplayWindow">
         <div class="drinkContent">
-            <span id="closeButton">&times;</span>
+            <article id="copying">
             <h2 class="drinkName"></h2>
             <img id="drinkThumbnail" src="" alt="">
             <h4>Ingredients:</h4>
-            <ul class="drinkIngredients">
-            </ul>
+            <p class="drinkIngredients"></p>
             <h4>Instructions</h4>
             <p class="drinkInstructions"></p>
+        </article>
+            <button id="closeButton">Close</button>
+            <button id="btn-copy">Copy</button>
+        
         </div>
         </div>
-        <section>
-            <div>
-                <div style="text-align: center;">
-                <ul class="bottom-align">
-                    <li id="view">View Drinks </li>
-                </ul>
-                </div>
-            </div>
-        </section>
+      
         <br>
 
+    
         <section>
             <div class="container">
                 <h2>Add Your Drink</h2>
@@ -89,6 +87,15 @@
                 </form>
             </div>
 
+        </section>
+        <section>
+            <div>
+                <div style="text-align: center;">
+                <p> 
+                    <button id="view">View Drinks</button>
+                </p>
+                </div>
+            </div>
         </section>
         <div id="main">
 
