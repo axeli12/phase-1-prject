@@ -12,7 +12,7 @@ const newUrl = "http://localhost:3000/drink"
 
 //function for keypress eventlistner
 function myFunction(){
-    document.getElementById("demo").style.background = "cyan"
+    document.getElementById("demo").style.background = "pink"
 }
 
 
