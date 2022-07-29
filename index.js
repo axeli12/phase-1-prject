@@ -5,20 +5,25 @@ const newDrink = document.getElementById('newDrink')
 document.getElementById('drink-form').addEventListener('submit', newDrinkObj)
 document.getElementById('searchButton').addEventListener('click', getDrinkName);
 document.getElementById('closeButton').addEventListener('click', closeButton);
+document.getElementById('demo').addEventListener("keypress", myFunction)
 viewDrinks.addEventListener('click', getDrinks)
 
-const newUrl = "http://localhost:3000/Populardrinks"
+const newUrl = "http://localhost:3000/drink"
 
+//function for keypress eventlistner
+function myFunction(){
+    document.getElementById("demo").style.background = "cyan"
+}
 
 
 function pagerefresh(){ 
     main.innerHTML = ''
 }
 
+// loads api data
 function getDrinkName() {
 
     const searchText = document.querySelector('.searchText').value;
-// loads api data
     fetch (`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`)
         .then(response => response.json())
         .then(data => {
@@ -57,23 +62,18 @@ document.querySelector('#modalDisplay').style.display = 'block';
 
 }
  
-
-
-
-
-
 function closeButton() {
     document.querySelector('#modalDisplay').style.display = 'none';
 }
 
-
+//adds new drink to db.json
 function newDrinkObj(e){
     e.preventDefault()
     let newDrinkObj = {
         name:e.target.name.value,
         image:e.target.image.value,
         recipe:e.target.recipe.value,
-        likes:e.target.likes.value,
+        likes: 0
     
     }
     loadDrink(newDrinkObj)
@@ -103,7 +103,7 @@ function getDrinks(){
             <p>${drinkObj.recipe}</p>
             
             <p>
-            likes: <span class="liked-times">${drinkObj.likes}</span> 
+            likes: <span class= liked-times >${drinkObj.likes}</span> 
             </p>
             </div>
 
@@ -112,17 +112,18 @@ function getDrinks(){
             </div>
         `
         main.appendChild(drink)
+
         drink.querySelector('#like').addEventListener('click', () => {
             drinkObj.likes +=1
             drink.querySelector('span').textContent = drinkObj.likes
             updateLikes(drink)
            
         })
-     
+    }
     //fucntion to add and update likes
     
     function updateLikes(drinkObj){
-        fetch(`http://localhost:3000/Populardrinks/${drinkObj.id}`, {
+        fetch(`http://localhost:3000/drink/${drinkObj.id}`, {
             method:'PATCH',
             headers:{
                 'Content-Type': 'application/json'
@@ -135,11 +136,11 @@ function getDrinks(){
     }
 
         
-    }
+    
 
     // adding new drink
 function addNewDrink(newDrinkObj){
-    fetch(`http://localhost:3000/Populardrinks`,{
+    fetch(`http://localhost:3000/drink`,{
         method:'POST',
         headers:{
             'Content-type': 'application/json'
@@ -150,12 +151,12 @@ function addNewDrink(newDrinkObj){
     .then(drink => console.log(drink))
 }
 
-
+//to close search result
 function closeButton() {
     document.querySelector('#modalDisplay').style.display = 'none';
 }
 
-
+//copy button to cop contents from search
 const copyButton = document.getElementById('btn-copy')
 copyButton.addEventListener('click', async (event) =>{
     const content = document.getElementById('copying').textContent

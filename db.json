@@ -1,5 +1,5 @@
 {
-  "Populardrinks": [
+  "drink": [
     {
       "id": 1,
       "name": "Classic Mojito",
@@ -46,9 +46,9 @@
       "name": "sea breeze ",
       "image": "https://www.acouplecooks.com/wp-content/uploads/2019/12/Sea-Breeze-Cocktail-003.jpg",
       "recipe": "vodka\ncrannberry juice\n",
-      "likes": "90",
+      "likes": 90,
       "id": 7
     }
-    
+   
   ]
 }
